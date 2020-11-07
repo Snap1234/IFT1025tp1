@@ -17,4 +17,6 @@ public abstract class Personne {
 		String adressMail = "address mail est = " + capitalNom + capitalPrenom + "@magasin.ca";
 		return adressMail;
 	}
+	abstract void produitPreferes();
+	abstract void addMoney();
 }
