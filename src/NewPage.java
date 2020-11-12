@@ -123,7 +123,7 @@ abstract class NewPage {
 		exemple2.setBounds(65,325,250,25);
 		pane.add(exemple2);
 		
-		titre.setText("Projet fid�lit�");
+		titre.setText("Projet fidélité");
 		titre.setFont(titre.getFont().deriveFont(18.0f));
 		titre.setBounds(110, 50, 200, 100);
 		pane.add(titre);
@@ -155,14 +155,14 @@ abstract class NewPage {
 		
 		JLabel nom = new JLabel("nom:");
 		JTextField getnom = new JTextField();
-		JLabel prenom = new JLabel("pr�nom:");
+		JLabel prenom = new JLabel("prénom:");
 		JTextField getprenom = new JTextField();
 		JLabel naissance = new JLabel("date de naissance:");
 		JTextField getnaissance = new JTextField();
 		
 		JLabel identite = new JLabel("s'inscire en tant que:");
 		JButton client = new JButton("client");
-		JButton employe = new JButton("employ�");
+		JButton employe = new JButton("employé");
 		JButton directeur = new JButton("directeur");
 		JButton retour =  new JButton("retour");
 		
@@ -202,7 +202,7 @@ abstract class NewPage {
 					}
 					else if (employe==e.getSource()) {
 						
-						if (employe.getText()=="retour") {	// Le bouton est modifi�. l'inscription est compl�t�. Retournons � la page Login.
+						if (employe.getText()=="retour") {	// Le bouton est modifié. l'inscription est complété. Retournons à la page Login.
 							
 							
 							Login(f,pane);
@@ -223,7 +223,7 @@ abstract class NewPage {
 					pane.remove(directeur);
 					pane.remove(client);
 					
-					identite.setText("Inscription termin�. Bienvenue.");
+					identite.setText("Inscription terminée. Bienvenue.");
 					identite.setBounds(105,160,200,50);
 					
 					employe.setText("retour");
@@ -305,7 +305,7 @@ abstract class NewPage {
 		deletecompte.setBounds(225,320,150,25);
 		pane.add(deletecompte);
 		
-		JButton gerer = new JButton("g�rer d�tails du compte");
+		JButton gerer = new JButton("gérer détails du compte");
 		gerer.setBounds(15,320,200,25);
 		pane.add(gerer);
 		//creation des boutons
@@ -316,7 +316,7 @@ abstract class NewPage {
 		dispo.setBounds(25,50,150,25);
 		pane.add(dispo);
 		
-		JLabel pref = new JLabel("meubles pr�f�r�s");
+		JLabel pref = new JLabel("meubles préférés");
 		pref.setBounds(225,50,150,25);
 		pane.add(pref);
 		
@@ -364,7 +364,7 @@ abstract class NewPage {
 		
 		class choose implements ListSelectionListener{// reagit a l'objet de la liste qui est selectionne
 			public void valueChanged(ListSelectionEvent e) { 
-				// On cherche � �changer les �l�ments des listes lorsque s�lectionn�. 
+				// On cherche à échanger les éléments des listes lorsque sélectionné. 
 				
 				
 				if(listmeuble.getSelectedIndex()!=-1) {
@@ -428,7 +428,7 @@ abstract class NewPage {
 					pane.add(scrollermeublelike);
 					
 					dispo.setText("meubles disponibles");
-					pref.setText("meubles pr�f�r�s");
+					pref.setText("meubles préférés");
 					
 					f.repaint();
 				//interchanger les boites d'aliments et de meubles	
@@ -441,7 +441,7 @@ abstract class NewPage {
 					pane.add(scrolleralimentlike);
 					
 					dispo.setText("aliments disponibles");
-					pref.setText("aliments pr�f�r�s");
+					pref.setText("aliments préférés");
 					
 					f.repaint();
 				}
@@ -481,7 +481,7 @@ abstract class NewPage {
 		f3.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		f3.setVisible(true);
 		
-		JLabel avertissement = new JLabel("�tes-vous s�r de vouloir effacer votre compte?");
+		JLabel avertissement = new JLabel("Êtes-vous sûr de vouloir effacer votre compte?");
 		JButton oui = new JButton("oui");
 		JButton non = new JButton("non");
 		
@@ -502,7 +502,7 @@ abstract class NewPage {
 						pane3.remove(non);
 						oui.setBounds(100,20,60,20);
 						oui.setText("ok");
-						avertissement.setText("votre compte � �t� effac�.");	
+						avertissement.setText("votre compte à été effacé.");	
 						avertissement.setBounds(60,0,200,20);
 						
 					}
@@ -542,7 +542,7 @@ abstract class NewPage {
 		buttonmeuble.setBounds(95,50,95,25);
 		pane.add(buttonmeuble);
 		
-		JButton produitspref = new JButton("les produits pr�f�r�s");
+		JButton produitspref = new JButton("les produits préférés");
 		produitspref.setBounds(95,295,190,25);
 		pane.add(produitspref);
 		
@@ -682,7 +682,7 @@ abstract class NewPage {
 		
 		
 		class choose implements ListSelectionListener{// reagit a l'objet de la liste qui est selectionne
-			public void valueChanged(ListSelectionEvent e) { // On cherche � �changer les �l�ments des listes lorsque s�lectionn�. 
+			public void valueChanged(ListSelectionEvent e) { // On cherche à échanger les éléments des listes lorsque sélectionnées. 
 				
 				
 				if(listmeuble.getSelectedIndex()!=-1) {
@@ -730,14 +730,14 @@ abstract class NewPage {
 		retour.setBounds(0,0,100,25);
 		pane.add(retour);
 		
-		JButton epicerie = new JButton("mon �picerie");
+		JButton epicerie = new JButton("mon épicerie");
 		epicerie.setBounds(100,275,125,35);
 		if(loggedinas.getStatus()=="directeur") { //seul le directeur aura acces
 			pane.add(epicerie);
 		}
 		
 		
-		JLabel titre = new JLabel("r�pertoire des membres");
+		JLabel titre = new JLabel("répertoire des membres");
 		titre.setBounds(100,25,200,20);
 		pane.add(titre);
 		
@@ -791,7 +791,7 @@ abstract class NewPage {
 		
 		
 		class choose implements ListSelectionListener{// reagit a l'objet de la liste qui est selectionne
-			public void valueChanged(ListSelectionEvent e) { // On cherche � �changer les �l�ments des listes lorsque s�lectionn�. 
+			public void valueChanged(ListSelectionEvent e) { // On cherche à échanger les éléments des listes lorsque sélectionné. 
 				int index=listPersonne.getSelectedIndex();
 				
 				if (index!=-1) {
@@ -912,14 +912,14 @@ public static void gestion(JFrame f,JPanel pane) {
 		
 		JLabel nom = new JLabel("nom:");
 		JTextField getnom = new JTextField(select().getNom());
-		JLabel prenom = new JLabel("pr�nom:");
+		JLabel prenom = new JLabel("prénom:");
 		JTextField getprenom = new JTextField(select().getPrenom());
 		JLabel naissance = new JLabel("date de naissance:");
 		JTextField getnaissance = new JTextField(select().getNaissance());
 		
-		JLabel identite = new JLabel("status pr�sent: "+select().getStatus());
+		JLabel identite = new JLabel("status présent: "+select().getStatus());
 		JButton client = new JButton("client");
-		JButton employe = new JButton("employ�");
+		JButton employe = new JButton("employé");
 		JButton directeur = new JButton("directeur");
 		JButton retour =  new JButton("retour");
 		JLabel notif = new JLabel("changer le status du compte");
@@ -980,12 +980,12 @@ public static void gestion(JFrame f,JPanel pane) {
 					identite.setText("status pr�sent: "+select().getStatus());
 				}
 				else if(e.getSource()==employe) {
-					select().setStatus("employ�");
-					identite.setText("status pr�sent: "+select().getStatus());
+					select().setStatus("employé");
+					identite.setText("status présent: "+select().getStatus());
 				}
 				else if(e.getSource()==directeur) {
 					select().setStatus("directeur");
-					identite.setText("status pr�sent: "+select().getStatus());
+					identite.setText("status présent: "+select().getStatus());
 				}
 				f.repaint();
 			}
@@ -1091,10 +1091,10 @@ public static void gestion(JFrame f,JPanel pane) {
 		titrealiment.setBounds(0,50,350,25);
 		pane.add(titrealiment);
 		
-		JLabel titremeuble = new JLabel("(nom),(centim�tres),(dollars),(directeur)=(j'aime)");
+		JLabel titremeuble = new JLabel("(nom),(centimètres),(dollars),(directeur)=(j'aime)");
 		titremeuble.setBounds(0,50,350,25);
 		
-		JLabel titre = new JLabel("Comptage total des pr�f�rences");
+		JLabel titre = new JLabel("Comptage total des préférences");
 		titre.setBounds(0,25,200,25);
 		pane.add(titre);
 		
