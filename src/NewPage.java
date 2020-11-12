@@ -68,7 +68,7 @@ abstract class NewPage {
 	
 	public static void Login(JFrame f,JPanel pane) {
 		resetpage(f);
-		f.setTitle("acceuil");
+		f.setTitle("accueil");
 		
 		
 		JLabel log = new JLabel();;
@@ -123,7 +123,7 @@ abstract class NewPage {
 		exemple2.setBounds(65,325,250,25);
 		pane.add(exemple2);
 		
-		titre.setText("Projet fidélité");
+		titre.setText("Projet fidï¿½litï¿½");
 		titre.setFont(titre.getFont().deriveFont(18.0f));
 		titre.setBounds(110, 50, 200, 100);
 		pane.add(titre);
@@ -155,14 +155,14 @@ abstract class NewPage {
 		
 		JLabel nom = new JLabel("nom:");
 		JTextField getnom = new JTextField();
-		JLabel prenom = new JLabel("prénom:");
+		JLabel prenom = new JLabel("prï¿½nom:");
 		JTextField getprenom = new JTextField();
 		JLabel naissance = new JLabel("date de naissance:");
 		JTextField getnaissance = new JTextField();
 		
 		JLabel identite = new JLabel("s'inscire en tant que:");
 		JButton client = new JButton("client");
-		JButton employe = new JButton("employé");
+		JButton employe = new JButton("employï¿½");
 		JButton directeur = new JButton("directeur");
 		JButton retour =  new JButton("retour");
 		
@@ -180,6 +180,18 @@ abstract class NewPage {
 			
 				
 				else if (!getprenom.getText().equals("")&& !getnom.getText().equals("")&& !getnaissance.getText().equals("") ) {
+					for (int i = 0; i < getnom.getText().length(); i++) {
+				         if (!Character.isLetter(getnom.getText().charAt(i)))
+				        	 JOptionPane.showMessageDialog(f,
+				        			    "Nom invalide, enlevez les caracteres speciaux");
+				   }
+				   
+				   for (int i = 0; i < getprenom.getText().length(); i++) {
+				         if (!Character.isLetter(getprenom.getText().charAt(i)))
+				        	 JOptionPane.showMessageDialog(f,
+				        			    "Prenom invalide, enlevez les caracteres speciaux");
+				        	 
+				   }
 	
 					
 					if		(client==e.getSource()) {
@@ -190,7 +202,7 @@ abstract class NewPage {
 					}
 					else if (employe==e.getSource()) {
 						
-						if (employe.getText()=="retour") {	// Le bouton est modifié. l'inscription est complété. Retournons à la page Login.
+						if (employe.getText()=="retour") {	// Le bouton est modifiï¿½. l'inscription est complï¿½tï¿½. Retournons ï¿½ la page Login.
 							
 							
 							Login(f,pane);
@@ -211,7 +223,7 @@ abstract class NewPage {
 					pane.remove(directeur);
 					pane.remove(client);
 					
-					identite.setText("Inscription terminé. Bienvenue.");
+					identite.setText("Inscription terminï¿½. Bienvenue.");
 					identite.setBounds(105,160,200,50);
 					
 					employe.setText("retour");
@@ -293,7 +305,7 @@ abstract class NewPage {
 		deletecompte.setBounds(225,320,150,25);
 		pane.add(deletecompte);
 		
-		JButton gerer = new JButton("gérer détails du compte");
+		JButton gerer = new JButton("gï¿½rer dï¿½tails du compte");
 		gerer.setBounds(15,320,200,25);
 		pane.add(gerer);
 		//creation des boutons
@@ -304,7 +316,7 @@ abstract class NewPage {
 		dispo.setBounds(25,50,150,25);
 		pane.add(dispo);
 		
-		JLabel pref = new JLabel("meubles préférés");
+		JLabel pref = new JLabel("meubles prï¿½fï¿½rï¿½s");
 		pref.setBounds(225,50,150,25);
 		pane.add(pref);
 		
@@ -352,7 +364,7 @@ abstract class NewPage {
 		
 		class choose implements ListSelectionListener{// reagit a l'objet de la liste qui est selectionne
 			public void valueChanged(ListSelectionEvent e) { 
-				// On cherche à échanger les éléments des listes lorsque sélectionné. 
+				// On cherche ï¿½ ï¿½changer les ï¿½lï¿½ments des listes lorsque sï¿½lectionnï¿½. 
 				
 				
 				if(listmeuble.getSelectedIndex()!=-1) {
@@ -416,7 +428,7 @@ abstract class NewPage {
 					pane.add(scrollermeublelike);
 					
 					dispo.setText("meubles disponibles");
-					pref.setText("meubles préférés");
+					pref.setText("meubles prï¿½fï¿½rï¿½s");
 					
 					f.repaint();
 				//interchanger les boites d'aliments et de meubles	
@@ -429,7 +441,7 @@ abstract class NewPage {
 					pane.add(scrolleralimentlike);
 					
 					dispo.setText("aliments disponibles");
-					pref.setText("aliments préférés");
+					pref.setText("aliments prï¿½fï¿½rï¿½s");
 					
 					f.repaint();
 				}
@@ -469,7 +481,7 @@ abstract class NewPage {
 		f3.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		f3.setVisible(true);
 		
-		JLabel avertissement = new JLabel("êtes-vous sûr de vouloir effacer votre compte?");
+		JLabel avertissement = new JLabel("ï¿½tes-vous sï¿½r de vouloir effacer votre compte?");
 		JButton oui = new JButton("oui");
 		JButton non = new JButton("non");
 		
@@ -490,7 +502,7 @@ abstract class NewPage {
 						pane3.remove(non);
 						oui.setBounds(100,20,60,20);
 						oui.setText("ok");
-						avertissement.setText("votre compte à été effacé.");	
+						avertissement.setText("votre compte ï¿½ ï¿½tï¿½ effacï¿½.");	
 						avertissement.setBounds(60,0,200,20);
 						
 					}
@@ -530,7 +542,7 @@ abstract class NewPage {
 		buttonmeuble.setBounds(95,50,95,25);
 		pane.add(buttonmeuble);
 		
-		JButton produitspref = new JButton("les produits préférés");
+		JButton produitspref = new JButton("les produits prï¿½fï¿½rï¿½s");
 		produitspref.setBounds(95,295,190,25);
 		pane.add(produitspref);
 		
@@ -670,7 +682,7 @@ abstract class NewPage {
 		
 		
 		class choose implements ListSelectionListener{// reagit a l'objet de la liste qui est selectionne
-			public void valueChanged(ListSelectionEvent e) { // On cherche à échanger les éléments des listes lorsque sélectionné. 
+			public void valueChanged(ListSelectionEvent e) { // On cherche ï¿½ ï¿½changer les ï¿½lï¿½ments des listes lorsque sï¿½lectionnï¿½. 
 				
 				
 				if(listmeuble.getSelectedIndex()!=-1) {
@@ -718,14 +730,14 @@ abstract class NewPage {
 		retour.setBounds(0,0,100,25);
 		pane.add(retour);
 		
-		JButton epicerie = new JButton("mon épicerie");
+		JButton epicerie = new JButton("mon ï¿½picerie");
 		epicerie.setBounds(100,275,125,35);
 		if(loggedinas.getStatus()=="directeur") { //seul le directeur aura acces
 			pane.add(epicerie);
 		}
 		
 		
-		JLabel titre = new JLabel("répertoire des membres");
+		JLabel titre = new JLabel("rï¿½pertoire des membres");
 		titre.setBounds(100,25,200,20);
 		pane.add(titre);
 		
@@ -779,7 +791,7 @@ abstract class NewPage {
 		
 		
 		class choose implements ListSelectionListener{// reagit a l'objet de la liste qui est selectionne
-			public void valueChanged(ListSelectionEvent e) { // On cherche à échanger les éléments des listes lorsque sélectionné. 
+			public void valueChanged(ListSelectionEvent e) { // On cherche ï¿½ ï¿½changer les ï¿½lï¿½ments des listes lorsque sï¿½lectionnï¿½. 
 				int index=listPersonne.getSelectedIndex();
 				
 				if (index!=-1) {
@@ -900,14 +912,14 @@ public static void gestion(JFrame f,JPanel pane) {
 		
 		JLabel nom = new JLabel("nom:");
 		JTextField getnom = new JTextField(select().getNom());
-		JLabel prenom = new JLabel("prénom:");
+		JLabel prenom = new JLabel("prï¿½nom:");
 		JTextField getprenom = new JTextField(select().getPrenom());
 		JLabel naissance = new JLabel("date de naissance:");
 		JTextField getnaissance = new JTextField(select().getNaissance());
 		
-		JLabel identite = new JLabel("status présent: "+select().getStatus());
+		JLabel identite = new JLabel("status prï¿½sent: "+select().getStatus());
 		JButton client = new JButton("client");
-		JButton employe = new JButton("employé");
+		JButton employe = new JButton("employï¿½");
 		JButton directeur = new JButton("directeur");
 		JButton retour =  new JButton("retour");
 		JLabel notif = new JLabel("changer le status du compte");
@@ -932,9 +944,22 @@ public static void gestion(JFrame f,JPanel pane) {
 				
 				else if(e.getSource()==nomenter){
 					
+					
 					if(!getnom.getText().equals("")) {
 						select().setNom(getnom.getText());
 						nompresent.setText(select().getNom());
+					}
+					for (int i = 0; i < getnom.getText().length(); i++) {
+						if (!Character.isLetter(getnom.getText().charAt(i)))
+							JOptionPane.showMessageDialog(f,
+									"Nom invalide");
+					}
+
+					for (int i = 0; i < getprenom.getText().length(); i++) {
+						if (!Character.isLetter(getprenom.getText().charAt(i)))
+							JOptionPane.showMessageDialog(f,
+									"Prenom invalide");
+
 					}
 					
 				}
@@ -952,15 +977,15 @@ public static void gestion(JFrame f,JPanel pane) {
 				}
 				else if(e.getSource()==client) {
 					select().setStatus("client");
-					identite.setText("status présent: "+select().getStatus());
+					identite.setText("status prï¿½sent: "+select().getStatus());
 				}
 				else if(e.getSource()==employe) {
-					select().setStatus("employé");
-					identite.setText("status présent: "+select().getStatus());
+					select().setStatus("employï¿½");
+					identite.setText("status prï¿½sent: "+select().getStatus());
 				}
 				else if(e.getSource()==directeur) {
 					select().setStatus("directeur");
-					identite.setText("status présent: "+select().getStatus());
+					identite.setText("status prï¿½sent: "+select().getStatus());
 				}
 				f.repaint();
 			}
@@ -1066,10 +1091,10 @@ public static void gestion(JFrame f,JPanel pane) {
 		titrealiment.setBounds(0,50,350,25);
 		pane.add(titrealiment);
 		
-		JLabel titremeuble = new JLabel("(nom),(centimètres),(dollars),(directeur)=(j'aime)");
+		JLabel titremeuble = new JLabel("(nom),(centimï¿½tres),(dollars),(directeur)=(j'aime)");
 		titremeuble.setBounds(0,50,350,25);
 		
-		JLabel titre = new JLabel("Comptage total des préférences");
+		JLabel titre = new JLabel("Comptage total des prï¿½fï¿½rences");
 		titre.setBounds(0,25,200,25);
 		pane.add(titre);
 		
