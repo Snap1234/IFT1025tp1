@@ -977,7 +977,7 @@ public static void gestion(JFrame f,JPanel pane) {
 				}
 				else if(e.getSource()==client) {
 					select().setStatus("client");
-					identite.setText("status pr�sent: "+select().getStatus());
+					identite.setText("status présent: "+select().getStatus());
 				}
 				else if(e.getSource()==employe) {
 					select().setStatus("employé");
